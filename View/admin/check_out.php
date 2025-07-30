@@ -1,0 +1,72 @@
+<?php include('db_connect.php'); 
+$cat = $conn->query("SELECT * FROM room_categories");
+$cat_arr = array();
+while($row = $cat->fetch_assoc()){
+	$cat_arr[$row['id']] = $row;
+}
+$room = $conn->query("SELECT * FROM rooms");
+$room_arr = array();
+while($row = $room->fetch_assoc()){
+	$room_arr[$row['id']] = $row;
+}
+?>
+<div class="container-fluid">
+    <div class="row mt-3 justify-content-center"> <!-- Center the content horizontally -->
+        <div class="col-md-10"> <!-- Use a column width appropriate for your layout -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Category</th>
+                                    <th>Room</th>
+                                    <th>Reference Number</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                $i = 1;
+                                $checked = $conn->query("SELECT * FROM checked where status != 0 order by status desc, id asc ");
+                                while($row=$checked->fetch_assoc()):
+                                ?>
+                                <tr>
+                                    <td><?php echo $i++ ?></td>
+                                    <td><?php echo $cat_arr[$room_arr[$row['room_id']]['category_id']]['name'] ?></td>
+                                    <td><?php echo $room_arr[$row['room_id']]['room'] ?></td>
+                                    <td><?php echo $row['ref_no'] ?></td>
+                                    <td>
+                                        <?php if($row['status'] == 1): ?>
+                                            <span class="badge badge-warning">Checked In</span>
+                                        <?php else: ?>
+                                            <span class="badge badge-success">Checked Out</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary check_out" type="button" data-id="<?php echo $row['id'] ?>">View</button>
+                                    </td>
+                                </tr>
+                                <?php endwhile; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	$('table').dataTable()
+	$('.check_out').click(function(){
+		uni_modal("Check Out","manage_check_out.php?checkout=1&id="+$(this).attr("data-id"))
+	})
+	$('#filter').submit(function(e){
+		e.preventDefault()
+		location.replace('index.php?page=check_in&category_id='+$(this).find('[name="category_id"]').val()+'&status='+$(this).find('[name="status"]').val())
+	})
+</script>

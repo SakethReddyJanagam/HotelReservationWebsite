@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+<title>AMS Hotel</title>
+</head>
+
+<body style="background-color: black;">
+    <div class="container1">
+        <header>
+            <h1 style="text-align:center; font-size:80px; color:rgb(254, 247, 253);">AMS Hotel</h1>
+        </header>
+    </div>
+    <div class="container2">
+        <div class="login">
+            <div class="row">
+                <div class="col-md-6 login-left"  style="background: none;">
+                    <h2 style="color:orange; font-size:50px">Registration</h2>
+                    <h3 style="font-size: 30px;"><a href="registration.html">Register</a></h3>
+                </div>
+                <div class="col-md-6 login-right" style="background: none;">
+                    <h2 style="color:orange; font-size:50px">Login</h2>
+                    <h3 style="font-size: 30px;"><a href="login.html">Login</a></h3>
+                </div>
+            
+                <div class="col-md-6 login-admin" style="background: none;">
+                    <h2 style="color:orange; font-size:50px">Admin</h2>
+                    <h3 style="font-size: 30px;"><a href="admin/index.php">Admin Login</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container3">
+        <script>
+            var images = ['outview.jpg', 'hotel.jpg', 'sunsetview.jpg']; // Add more image paths if needed
+            var index = 0;
+        
+            function changeBackground() {
+                document.body.style.backgroundImage = "url('" + images[index] + "')";
+                index = (index + 1) % images.length;
+            }
+        
+            setInterval(changeBackground, 3000); // Change background every 10 seconds
+        
+            // Trigger the first image change immediately
+            changeBackground();
+        </script>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="About">
+                <h2 style="color:orange; font-size:50px; text-align:center;">About Us</h2>
+                <div style="color: white; font-size:20px; margin-left: 7px;">
+                    
+                    <p>Welcome to AMS Hotel, where luxury meets comfort. Located in the heart of the city, AMS Hotel offers exquisite accommodations, exceptional dining experiences, and top-notch amenities.</p>
+                    <p>At AMS Hotel, we strive to provide unparalleled hospitality to our guests, ensuring a memorable stay every time. Whether you're traveling for business or leisure, our dedicated staff is committed to making your stay truly exceptional.</p>
+                    <p>Discover the perfect blend of elegance and convenience at AMS Hotel. Book your stay with us today and experience hospitality at its finest.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <section id="locate">
+                <h1 style="text-align:center; font-size:30px; color: rgb(239, 230, 230);background-color: none" style="padding-bottom: 10px;">Our Location</h1>
+                <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3" >
+                      <div style ="margin-top: 0px;" id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                      var setting = {"query":"Duncan Avenue, Jersey City, NJ, USA","width":1500,"height":350,"satellite":false,"zoom":12,"placeId":"EiBEdW5jYW4gQXZlLCBKZXJzZXkgQ2l0eSwgTkosIFVTQSIuKiwKFAoSCbV5x0grUcKJETCSObFOmmpzEhQKEgndr78l0lDCiRHZJc2iE_BJAg","cid":"0x736a9a4eb1399230","coords":[40.7289488,-74.0816566],"lang":"us","queryString":"Duncan Avenue, Jersey City, NJ, USA","centerCoord":[40.7289488,-74.0816566],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"1080690"};
+                      var d = document;
+                      var s = d.createElement('script');
+                      s.src = 'https://1map.com/js/script-for-user.js?embed_id=1080690';
+                      s.async = true;
+                      s.onload = function (e) {
+                        window.OneMap.initMap(setting)
+                      };
+                      var to = d.getElementsByTagName('script')[0];
+                      to.parentNode.insertBefore(s, to);
+                    })();</script><a href="https://1map.com/us/map-embed">1 Map</a></div>
+                    </section>
+                    </div>
+
+                    <footer id ="filter-book" style="background-color: #475c71;; padding: 20px 0;">
+                        <div style="text-align: center; color: #000; font-size: 30px; background-color: #475c71;">CONTACT US</div>
+                        <div style="background-color: #475c71; color: #333; padding: 20px; border-radius: 20px; margin-top: 30px;">
+                            <div style="max-width: 1200px; margin: 0 auto;">
+                                
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                                    <div style="flex: 0 0 calc(50% - 20px); margin-bottom: 20px; color: #000;">
+                                        <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 20px; text-align: center;">Contact</h4>
+                                        <a href="index.php#locate" style="text-decoration: none; color: #000; display: block; margin-bottom: 20px; text-align: center;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Duncan Avenue, Jersey City, NJ, 07304, US</a>
+                                        <p style="margin-bottom: 20px; text-align: center;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i>+012 651 4758</p>
+                                        <p style="margin-bottom: 20px; text-align: center;"><i class="fas fa-envelope" style="margin-right: 10px;"></i><a href="mailto:amshotel@gmail.com" style="color: black;">amshotel@gmail.com</a></p>
+                                    </div>
+                                    
+                                    <div  style="flex: 0 0 calc(50% - 20px); margin-bottom: 20px; color: #000;">
+                                        <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 20px; text-align: center;">Newsletter</h4>
+                                        <form style="text-align: center;">
+                                            <div  style="display: inline-block; margin-bottom: 20px;">
+                                                <input type="email" style="width: calc(70% - 10px); background-color: #fff; padding: 10px; border-radius: 50px; border: none; padding-left: 30px; display: inline-block; border: 2px solid white" placeholder="Your email">
+                                                <button class="social" style="background-color: #000; color: #fff; border: 2px solid #25303E; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: box-shadow 0.3s; display: inline-block;">Sign Up</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div style="text-align: center; margin-top: 30px; color: #d5cccc; font-size: 14px;">&copy; <a href="#" style="color: #cfc2c2; text-decoration: none;">AMS</a>, All Right Reserved.</div>
+                            </div>
+                        </div>
+                    </footer>
+                    
+                    
+    
+</body>
+
+</html>

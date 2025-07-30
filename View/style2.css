@@ -1,0 +1,62 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 5;
+    padding: 5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+}
+.container2{
+    max-width: 80px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+.container3{
+    max-width: 80px;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: white;
+}
+header {
+    margin-bottom: 20px;
+}
+
+.login {
+    margin-bottom: 50px;
+}
+
+.login-left,
+.login-right {
+    padding: 20px;
+  
+    border-radius: 5px;
+    background-color: none;
+}
+
+.login-right {
+    margin-left: 10px;
+}
+
+.login a {
+    color: rgb(222, 213, 213);
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: none;
+}
+.about {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
